@@ -10,7 +10,8 @@ class NotSetAPIKEY(Exception):
 
 
 class Auth:
-    def from_env(key_name: str) -> str:
+    @staticmethod
+    def from_env(key_name: str = "") -> str:
         key_name = key_name or ENV_API_KEY
         api_key = os.getenv(key_name)
         if api_key is None:
@@ -20,9 +21,12 @@ class Auth:
 
 class BearerAuth(requests.auth.AuthBase):
     def __init__(self, token: str):
-        auth = Auth()
-        token = auth.from_env(token)
-        self.token = token
+        if token:
+            self.token = token
+        else:
+            auth = Auth()
+            token = auth.from_env("")
+            self.token = token
 
     def __call__(self, r):
         r.headers["authorization"] = "Bearer " + self.token
