@@ -1,5 +1,4 @@
 import os
-from typing import Optional
 
 import requests
 
@@ -11,7 +10,7 @@ class NotSetAPIKEY(Exception):
 
 
 class Auth:
-    def from_env(key_name: Optional[str] = None) -> str:
+    def from_env(key_name: str) -> str:
         key_name = key_name or ENV_API_KEY
         api_key = os.getenv(key_name)
         if api_key is None:
@@ -20,7 +19,7 @@ class Auth:
 
 
 class BearerAuth(requests.auth.AuthBase):
-    def __init__(self, token: Optional[str] = None):
+    def __init__(self, token: str):
         auth = Auth()
         token = auth.from_env(token)
         self.token = token
