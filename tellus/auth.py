@@ -1,18 +1,21 @@
-import logging
 import os
 from typing import Optional
 
 import requests
 
-LOGGER = logging.getLogger(__name__)
-
 ENV_API_KEY = "TELLUS_API_KEY"
+
+
+class NotSetAPIKEY(Exception):
+    pass
 
 
 class Auth:
     def from_env(key_name: Optional[str] = None) -> str:
         key_name = key_name or ENV_API_KEY
         api_key = os.getenv(key_name)
+        if api_key is None:
+            raise NotSetAPIKEY
         return api_key
 
 
