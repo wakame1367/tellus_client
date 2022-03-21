@@ -13,6 +13,7 @@ def _get_user_agent():
 
 class GeoPoint(BaseModel):
     # GeoJSON RFC says it must be in the order of [longitude, latitude] for a Position
+    # https://github.com/samuelcolvin/pydantic/issues/2062
     longitude: confloat(ge=-180.0, le=180.0)
     latitude: confloat(ge=-90.0, le=90.0)
 
