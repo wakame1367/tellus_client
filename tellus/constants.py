@@ -12,6 +12,9 @@ class RequestType(Enum):
     PUT = "PUT"
     PATCH = "PATCH"
 
+    def __str__(self) -> str:
+        return self.value
+
 
 class SatelliteID(Enum):
     """Satellite identifier used in tellus api."""
@@ -22,3 +25,6 @@ class SatelliteID(Enum):
     TSUBAME = "tsubame"
     LANDSAT_8 = "landsat8"
     PALSAR_2 = "palsar2"
+
+    def __str__(self) -> str:
+        return self.value

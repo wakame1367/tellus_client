@@ -16,7 +16,7 @@ class BaseClient:
     api_version = "/api/v1"
 
     def __init__(self) -> None:
-        _api = urljoin(self.api_version, self.satellite_id)
+        _api = urljoin(self.api_version, str(self.satellite_id))
         self.base_url = urljoin(BASE_TILE_URL, _api)
 
     def search_scene(self, min_lat, min_lon, max_lat, max_lon):
