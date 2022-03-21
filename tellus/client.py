@@ -27,12 +27,12 @@ class BaseClient:
             "max_lon": max_lon,
         }
         url = urljoin(self.base_url, "scene")
-        resp = _do_request(RequestType.GET, url, params=params, headers={})
+        resp = _do_request(RequestType.GET, url, data=None, params=params, headers={})
         return resp
 
     def get_scene(self, product_id: str):
         url = urljoin(self.base_url, f"get_scene/{product_id}")
-        resp = _do_request(RequestType.GET, url, params={}, headers={})
+        resp = _do_request(RequestType.GET, url, data=None, params={}, headers={})
         return resp
 
 
