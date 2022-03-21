@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>API Reference &#8212; tellus 0.1.dev0 documentation</title>
+    <title>tellus.constants module &#8212; tellus 0.1.dev0 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -36,8 +36,8 @@
     <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="tellus package" href="tellus.html" />
-    <link rel="prev" title="Installation" href="../../index.html" />
+    <link rel="next" title="tellus.dispatch module" href="tellus.dispatch.html" />
+    <link rel="prev" title="tellus.client module" href="tellus.client.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -81,7 +81,7 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="modules.html">
    API Reference
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -89,17 +89,17 @@
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2 has-children">
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="tellus.html">
      tellus package
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
      <li class="toctree-l3">
       <a class="reference internal" href="tellus.auth.html">
        tellus.auth module
@@ -110,8 +110,8 @@
        tellus.client module
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="tellus.constants.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        tellus.constants module
       </a>
      </li>
@@ -195,7 +195,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/source/packages/modules.rst.txt"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/source/packages/tellus.constants.rst.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.rst</button></a>
         <!-- Download PDF via print -->
@@ -227,7 +227,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>API Reference</h1>
+                <h1>tellus.constants module</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -238,25 +238,77 @@
             
               <div>
                 
-  <div class="section" id="api-reference">
-<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tellus.html">tellus package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tellus.html#submodules">Submodules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tellus.auth.html">tellus.auth module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.client.html">tellus.client module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.constants.html">tellus.constants module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.dispatch.html">tellus.dispatch module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.exceptions.html">tellus.exceptions module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.models.html">tellus.models module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tellus.util.html">tellus.util module</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
+  <div class="section" id="module-tellus.constants">
+<span id="tellus-constants-module"></span><h1>tellus.constants module<a class="headerlink" href="#module-tellus.constants" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="tellus.constants.RequestType">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.constants.</code><code class="sig-name descname">RequestType</code><a class="reference internal" href="../../_modules/tellus/constants.html#RequestType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.constants.RequestType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Enum constant class for GET/POST request type.</p>
+<dl class="attribute">
+<dt id="tellus.constants.RequestType.DELETE">
+<code class="sig-name descname">DELETE</code><em class="property"> = 'DELETE'</em><a class="headerlink" href="#tellus.constants.RequestType.DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.RequestType.GET">
+<code class="sig-name descname">GET</code><em class="property"> = 'GET'</em><a class="headerlink" href="#tellus.constants.RequestType.GET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.RequestType.PATCH">
+<code class="sig-name descname">PATCH</code><em class="property"> = 'PATCH'</em><a class="headerlink" href="#tellus.constants.RequestType.PATCH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.RequestType.POST">
+<code class="sig-name descname">POST</code><em class="property"> = 'POST'</em><a class="headerlink" href="#tellus.constants.RequestType.POST" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.RequestType.PUT">
+<code class="sig-name descname">PUT</code><em class="property"> = 'PUT'</em><a class="headerlink" href="#tellus.constants.RequestType.PUT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.constants.SatelliteID">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.constants.</code><code class="sig-name descname">SatelliteID</code><a class="reference internal" href="../../_modules/tellus/constants.html#SatelliteID"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.constants.SatelliteID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Satellite identifier used in tellus api.</p>
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.ASNARO_1">
+<code class="sig-name descname">ASNARO_1</code><em class="property"> = 'asnaro1'</em><a class="headerlink" href="#tellus.constants.SatelliteID.ASNARO_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.ASNARO_2">
+<code class="sig-name descname">ASNARO_2</code><em class="property"> = 'asnaro2'</em><a class="headerlink" href="#tellus.constants.SatelliteID.ASNARO_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.AVINIR_2">
+<code class="sig-name descname">AVINIR_2</code><em class="property"> = 'av2ori'</em><a class="headerlink" href="#tellus.constants.SatelliteID.AVINIR_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.LANDSAT_8">
+<code class="sig-name descname">LANDSAT_8</code><em class="property"> = 'landsat8'</em><a class="headerlink" href="#tellus.constants.SatelliteID.LANDSAT_8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.PALSAR_2">
+<code class="sig-name descname">PALSAR_2</code><em class="property"> = 'palsar2'</em><a class="headerlink" href="#tellus.constants.SatelliteID.PALSAR_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.constants.SatelliteID.TSUBAME">
+<code class="sig-name descname">TSUBAME</code><em class="property"> = 'tsubame'</em><a class="headerlink" href="#tellus.constants.SatelliteID.TSUBAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -265,17 +317,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../../index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="tellus.client.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Installation</p>
+            <p class="prev-next-title">tellus.client module</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="tellus.html" title="next page">
+    <a class='right-next' id="next-link" href="tellus.dispatch.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">tellus package</p>
+        <p class="prev-next-title">tellus.dispatch module</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>tellus.client module &#8212; tellus 0.1.dev0 documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/rtd_sphinx_search.min.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/js/rtd_sphinx_search.min.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="tellus.constants module" href="tellus.constants.html" />
+    <link rel="prev" title="tellus.auth module" href="tellus.auth.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">tellus 0.1.dev0 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="modules.html">
+   API Reference
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="tellus.html">
+     tellus package
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.auth.html">
+       tellus.auth module
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       tellus.client module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.constants.html">
+       tellus.constants module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.dispatch.html">
+       tellus.dispatch module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.exceptions.html">
+       tellus.exceptions module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.models.html">
+       tellus.models module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="tellus.util.html">
+       tellus.util module
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../changelog.html">
+   Changelog
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../py-modindex.html">
+   Module Index
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../genindex.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/source/packages/tellus.client.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>tellus.client module</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="module-tellus.client">
+<span id="tellus-client-module"></span><h1>tellus.client module<a class="headerlink" href="#module-tellus.client" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="tellus.client.ASNARO1">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">ASNARO1</code><a class="reference internal" href="../../_modules/tellus/client.html#ASNARO1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.ASNARO1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.SARCSatlient" title="tellus.client.SARCSatlient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.SARCSatlient</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.ASNARO1.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'asnaro1'</em><a class="headerlink" href="#tellus.client.ASNARO1.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.ASNARO2">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">ASNARO2</code><a class="reference internal" href="../../_modules/tellus/client.html#ASNARO2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.ASNARO2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.SARCSatlient" title="tellus.client.SARCSatlient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.SARCSatlient</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.ASNARO2.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'asnaro2'</em><a class="headerlink" href="#tellus.client.ASNARO2.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.AVNIR2">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">AVNIR2</code><a class="reference internal" href="../../_modules/tellus/client.html#AVNIR2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.AVNIR2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.OptSatClient" title="tellus.client.OptSatClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.OptSatClient</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.AVNIR2.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'av2ori'</em><a class="headerlink" href="#tellus.client.AVNIR2.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.BaseClient">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">BaseClient</code><a class="reference internal" href="../../_modules/tellus/client.html#BaseClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.BaseClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.BaseClient.api_version">
+<code class="sig-name descname">api_version</code><em class="property"> = '/api/v1'</em><a class="headerlink" href="#tellus.client.BaseClient.api_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tellus.client.BaseClient.get_scene">
+<code class="sig-name descname">get_scene</code><span class="sig-paren">(</span><em class="sig-param">product_id: str</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/tellus/client.html#BaseClient.get_scene"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.BaseClient.get_scene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="tellus.client.BaseClient.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'asnaro1'</em><a class="headerlink" href="#tellus.client.BaseClient.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tellus.client.BaseClient.search_scene">
+<code class="sig-name descname">search_scene</code><span class="sig-paren">(</span><em class="sig-param">min_lat</em>, <em class="sig-param">min_lon</em>, <em class="sig-param">max_lat</em>, <em class="sig-param">max_lon</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/tellus/client.html#BaseClient.search_scene"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.BaseClient.search_scene" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.OptSatClient">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">OptSatClient</code><a class="reference internal" href="../../_modules/tellus/client.html#OptSatClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.OptSatClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.BaseClient" title="tellus.client.BaseClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.BaseClient</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.PALSAR2">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">PALSAR2</code><a class="reference internal" href="../../_modules/tellus/client.html#PALSAR2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.PALSAR2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.OptSatClient" title="tellus.client.OptSatClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.OptSatClient</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.PALSAR2.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'palsar2'</em><a class="headerlink" href="#tellus.client.PALSAR2.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.SARCSatlient">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">SARCSatlient</code><a class="reference internal" href="../../_modules/tellus/client.html#SARCSatlient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.SARCSatlient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.BaseClient" title="tellus.client.BaseClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.BaseClient</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="tellus.client.TSUBAME">
+<em class="property">class </em><code class="sig-prename descclassname">tellus.client.</code><code class="sig-name descname">TSUBAME</code><a class="reference internal" href="../../_modules/tellus/client.html#TSUBAME"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tellus.client.TSUBAME" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tellus.client.OptSatClient" title="tellus.client.OptSatClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">tellus.client.OptSatClient</span></code></a></p>
+<dl class="attribute">
+<dt id="tellus.client.TSUBAME.satellite_id">
+<code class="sig-name descname">satellite_id</code><em class="property"> = 'tsubame'</em><a class="headerlink" href="#tellus.client.TSUBAME.satellite_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="tellus.auth.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">tellus.auth module</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="tellus.constants.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">tellus.constants module</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kota Yuhara<br/>
+    
+        &copy; Copyright 2022, Kota Yuhara.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

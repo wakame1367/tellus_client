@@ -1,0 +1,7 @@
+tellus.auth module
+==================
+
+.. automodule:: tellus.auth
+   :members:
+   :undoc-members:
+   :show-inheritance:

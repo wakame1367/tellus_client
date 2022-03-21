@@ -1,0 +1,7 @@
+tellus.client module
+====================
+
+.. automodule:: tellus.client
+   :members:
+   :undoc-members:
+   :show-inheritance:

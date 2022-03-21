@@ -1,0 +1,7 @@
+tellus.exceptions module
+========================
+
+.. automodule:: tellus.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:

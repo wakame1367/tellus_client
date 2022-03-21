@@ -1,0 +1,7 @@
+tellus.dispatch module
+======================
+
+.. automodule:: tellus.dispatch
+   :members:
+   :undoc-members:
+   :show-inheritance:

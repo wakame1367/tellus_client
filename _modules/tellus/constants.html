@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>package_name.module &#8212; package-name 0.1.dev0 documentation</title>
+    <title>tellus.constants &#8212; tellus 0.1.dev0 documentation</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -64,7 +64,7 @@
       
       
       
-      <h1 class="site-logo" id="site-title">package-name 0.1.dev0 documentation</h1>
+      <h1 class="site-logo" id="site-title">tellus 0.1.dev0 documentation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -89,8 +89,8 @@
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../source/packages/package_name.html">
-     package_name package
+    <a class="reference internal" href="../../source/packages/tellus.html">
+     tellus package
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
@@ -99,8 +99,38 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../source/packages/package_name.module.html">
-       package_name.module module
+      <a class="reference internal" href="../../source/packages/tellus.auth.html">
+       tellus.auth module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.client.html">
+       tellus.client module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.constants.html">
+       tellus.constants module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.dispatch.html">
+       tellus.dispatch module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.exceptions.html">
+       tellus.exceptions module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.models.html">
+       tellus.models module
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../source/packages/tellus.util.html">
+       tellus.util module
       </a>
      </li>
     </ul>
@@ -189,42 +219,37 @@
             
               <div>
                 
-  <h1>Source code for package_name.module</h1><div class="highlight"><pre>
-<span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Module provides a simple cubic_rectification function.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+  <h1>Source code for tellus.constants</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">BASE_TILE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://gisapi.tellusxdp.com&quot;</span>
 
 
-<div class="viewcode-block" id="cubic_rectification"><a class="viewcode-back" href="../../source/packages/package_name.module.html#package_name.module.cubic_rectification">[docs]</a><span class="k">def</span> <span class="nf">cubic_rectification</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Rectified cube of an array.</span>
+<div class="viewcode-block" id="RequestType"><a class="viewcode-back" href="../../source/packages/tellus.constants.html#tellus.client.RequestType">[docs]</a><span class="k">class</span> <span class="nc">RequestType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Enum constant class for GET/POST request type.&quot;&quot;&quot;</span>
 
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    x : numpy.ndarray</span>
-<span class="sd">        Input array.</span>
-<span class="sd">    verbose : bool, optional</span>
-<span class="sd">        Whether to print out details. Default is ``False``.</span>
+    <span class="n">GET</span> <span class="o">=</span> <span class="s2">&quot;GET&quot;</span>
+    <span class="n">POST</span> <span class="o">=</span> <span class="s2">&quot;POST&quot;</span>
+    <span class="n">DELETE</span> <span class="o">=</span> <span class="s2">&quot;DELETE&quot;</span>
+    <span class="n">PUT</span> <span class="o">=</span> <span class="s2">&quot;PUT&quot;</span>
+    <span class="n">PATCH</span> <span class="o">=</span> <span class="s2">&quot;PATCH&quot;</span>
 
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    numpy.ndarray</span>
-<span class="sd">        Elementwise, the cube of `x` where it is positive and ``0`` otherwise.</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span></div>
 
-<span class="sd">    Note</span>
-<span class="sd">    ----</span>
-<span class="sd">    This is a sample function, using a numpy docstring format.</span>
 
-<span class="sd">    Note</span>
-<span class="sd">    ----</span>
-<span class="sd">    The use of intersphinx will cause :class:`numpy.ndarray` to link to</span>
-<span class="sd">    the numpy documentation page.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cubing and then rectifying </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span></div>
+<div class="viewcode-block" id="SatelliteID"><a class="viewcode-back" href="../../source/packages/tellus.constants.html#tellus.client.SatelliteID">[docs]</a><span class="k">class</span> <span class="nc">SatelliteID</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Satellite identifier used in tellus api.&quot;&quot;&quot;</span>
+
+    <span class="n">AVINIR_2</span> <span class="o">=</span> <span class="s2">&quot;av2ori&quot;</span>
+    <span class="n">ASNARO_1</span> <span class="o">=</span> <span class="s2">&quot;asnaro1&quot;</span>
+    <span class="n">ASNARO_2</span> <span class="o">=</span> <span class="s2">&quot;asnaro2&quot;</span>
+    <span class="n">TSUBAME</span> <span class="o">=</span> <span class="s2">&quot;tsubame&quot;</span>
+    <span class="n">LANDSAT_8</span> <span class="o">=</span> <span class="s2">&quot;landsat8&quot;</span>
+    <span class="n">PALSAR_2</span> <span class="o">=</span> <span class="s2">&quot;palsar2&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span></div>
 </pre></div>
 
               </div>
@@ -239,9 +264,9 @@
     <footer class="footer">
   <p>
     
-      By Author Name<br/>
+      By Kota Yuhara<br/>
     
-        &copy; Copyright 2022, Author Name.<br/>
+        &copy; Copyright 2022, Kota Yuhara.<br/>
   </p>
 </footer>
 </main>

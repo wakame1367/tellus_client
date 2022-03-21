@@ -1,0 +1,20 @@
+tellus package
+==============
+
+.. automodule:: tellus
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+
+   tellus.auth
+   tellus.client
+   tellus.constants
+   tellus.dispatch
+   tellus.exceptions
+   tellus.models
+   tellus.util
